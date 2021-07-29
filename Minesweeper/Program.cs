@@ -1,4 +1,5 @@
 ﻿using System;
+using Raylib_cs;
 
 namespace Minesweeper
 {
@@ -7,6 +8,16 @@ namespace Minesweeper
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Raylib.InitWindow(500,500, "MineSweeper");
+            GameMaster gameMaster = new GameMaster(15, 15);
+
+            while(!Raylib.WindowShouldClose())
+            {
+                
+                
+                gameMaster.DrawAll();
+            }
+            
         }
     }
 }
